@@ -10,9 +10,8 @@ import com.example.demonp.service.MailSender;
 public class MailController {
 	private MailSender mailSender;
 
-	// optional @Autowired
-	public MailController(@Qualifier("smtpMail") MailSender smtp) {
-		this.mailSender = smtp;
+	public MailController(@Qualifier("smtpMailSender") MailSender mailSender) {
+		this.mailSender = mailSender;
 	}
 
 	@RequestMapping("/mail")
