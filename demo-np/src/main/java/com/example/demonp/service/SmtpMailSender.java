@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("smtp")
 public class SmtpMailSender implements MailSender {
 	private static Logger log = LoggerFactory.getLogger(SmtpMailSender.class);
 	@Override
