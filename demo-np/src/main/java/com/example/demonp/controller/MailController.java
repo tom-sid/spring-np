@@ -1,5 +1,6 @@
 package com.example.demonp.controller;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,7 +11,7 @@ public class MailController {
 	private MailSender mailSender;
 
 	// optional @Autowired
-	public MailController(MailSender smtp) {
+	public MailController(@Qualifier("smtpMail") MailSender smtp) {
 		this.mailSender = smtp;
 	}
 
