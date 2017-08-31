@@ -2,7 +2,9 @@ package com.example.demonp.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
+@Service
 public class StubMailSender implements MailSender {
 
 	private static Logger log = LoggerFactory.getLogger(StubMailSender.class);
