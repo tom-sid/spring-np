@@ -9,14 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HelloController {
-	
+
 	@Autowired
 	private MessageSource messageSource;
-	
+
 	@RequestMapping("/hello")
 	public String hello(Model model) {
-		
+
 		model.addAttribute("name", messageSource.getMessage("name", null, LocaleContextHolder.getLocale()));
+
+		Object[] addresses = { "Austin", "Dallas" };
+		model.addAttribute("address", messageSource.getMessage("address", addresses, LocaleContextHolder.getLocale()));
+
 		return "hello";
 	}
 }
