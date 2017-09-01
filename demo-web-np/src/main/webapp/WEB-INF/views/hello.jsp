@@ -1,3 +1,4 @@
 <%@ include file="includes/header.jsp"%>
-<h1>Hello, ${name}</h1>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<spring:message code="hello"></spring:message> ${name}
 <%@ include file="includes/footer.jsp"%>
