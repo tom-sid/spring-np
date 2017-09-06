@@ -1,8 +1,20 @@
 package com.example.demowebnp.model;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
+
 public class User {
+	@NotBlank
+	@Email
+	@Size(min = 4, max = 250)
 	private String email;
+	@NotBlank
+	@Size(min = 1, max = 100)
 	private String name;
+	@NotBlank
+	@Size(min = 6, max = 32)
 	private String password;
 
 	public String getEmail() {
