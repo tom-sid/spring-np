@@ -8,6 +8,8 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="/js/lib/bootstrap-4.0.0-beta-dist/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/css/styles.css">
 
 </head>
 <body>

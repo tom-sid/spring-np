@@ -6,11 +6,11 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 public class User {
-	@NotBlank
+	@NotBlank(message = "Please provide your email address")
 	@Email
-	@Size(min = 4, max = 250)
+	@Size(min = 4, max = 250, message = "{emailSizeError}")
 	private String email;
-	@NotBlank
+	@NotBlank(message = "{blankName}")
 	@Size(min = 1, max = 100)
 	private String name;
 	@NotBlank
